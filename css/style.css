@@ -1,0 +1,231 @@
+:root {
+    --dark-green: #11382a;
+    --emerald-green: #226f54;
+    --light-green: #87c38f;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #1f1f1f;
+    --light-grey: #cccccc;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Headings */
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6,
+.body {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    margin: 0;
+}
+
+.heading-1 {
+    font-size: 3.5rem;
+}
+
+.heading-2 {
+    font-size: 3rem;
+}
+
+.heading-3 {
+    font-size: 2.5rem;
+}
+
+.heading-4 {
+    font-size: 2rem;
+}
+
+.heading-5 {
+    font-size: 1.5rem;
+}
+
+.heading-6 {
+    font-size: 1.2rem;
+}
+
+.body {
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Colors */
+
+.bg-dark-green {
+    background-color: var(--dark-green);
+    color: var(--light-green);
+    border-color: var(--dark-green);
+}
+
+.bg-emerald-green {
+    background-color: var(--emerald-green);
+    color: var(--light-green);
+    border-color: var(--emerald-green);
+}
+
+.bg-light-green {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    border-color: var(--light-green);
+}
+
+.bg-black {
+    background-color: var(--black);
+    color: var(--light-grey);
+    border-color: var(--black);
+}
+
+.bg-white {
+    background-color: var(--white);
+    color: var(--grey);
+    border-color: var(--white);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+    color: var(--light-grey);
+    border-color: var(--grey);
+}
+
+.bg-light-grey {
+    background-color: var(--light-grey);
+    color: var(--grey);
+    border-color: var(--light-grey);
+}
+
+.dark-green {
+    color: var(--dark-green);
+}
+
+.emerald-green {
+    color: var(--emerald-green);
+}
+
+.light-green {
+    color: var(--light-green);
+}
+
+.black {
+    color: var(--black);
+}
+
+.white {
+    color: var(--white);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.light-grey {
+    color: var(--light-grey);
+}
+
+/* Hexagon Shape */
+
+.hexagon {
+    --height: 69px;
+    --width: 120px;
+
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    margin: calc(var(--height) / 2) 0;
+}
+
+.hexagon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    width: 0px;
+    border-bottom: calc(var(--height) / 2) solid var(--dark-green);
+    border-left: calc(var(--width) / 2) solid transparent;
+    border-right: calc(var(--width) / 2) solid transparent;
+}
+
+.hexagon::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0px;
+    left: 0;
+    border-top: calc(var(--height) / 2) solid var(--dark-green);
+    border-left: calc(var(--width) / 2) solid transparent;
+    border-right: calc(var(--width) / 2) solid transparent;
+}
+
+.h-small {
+    --height: 35px;
+    --width: 60px;
+}
+
+.h-big {
+    --height: 277px;
+    --width: 480px;
+}
+
+.cp-hexagon-horizontal {
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.cp-hexagon-vertical {
+    clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+/* Landing page */
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+#profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-section {
+    width: 50vw;
+    margin: 48px 32px;
+}
+
+.text-outline {
+    width: 20vw;
+    height: 20vw;
+    float: right;
+    shape-outside: polygon(100% 0, 100% 100%, 0 100%, 5% 55%, 25% 25%, 55% 0);
+}
+
+.name {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    transform: rotate(-30deg);
+    transform-origin: left center;
+}
+
+#hex-picture {
+    width: 30vw;
+    height: 30vw;
+}
+
+#hex-picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

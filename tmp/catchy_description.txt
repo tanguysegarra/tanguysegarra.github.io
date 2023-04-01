@@ -1,0 +1,9 @@
+Hello there! My name is Tanguy!
+Coming from the real-time and embedded systems major in my school, I have been
+eager to learn and understand what's going on in my computer since I started
+coding. I consider myself a low-level programmer and C lover.  Even though my
+"official" job is currently to secure the cloud infrastructure of the #1
+European e-healthcare company, I am even more happier of being part of its
+incident response team.  These days, I am mainly focusing on learning
+reverse-engineering and malware analysis in order to be ready when the time
+comes.
